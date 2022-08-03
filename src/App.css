@@ -5,7 +5,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-button {
+.login button {
   border: none;
   outline: none;
   width: 100%;
@@ -121,47 +121,26 @@ button {
   font-size: 25px;
 }
 
+.hero nav h1 {
+  color: #fff;
+}
+
 .hero nav button {
   width: 86px;
   padding: 8px 0;
   background: #c015158a;
-}
-
-.create {
-  width: 86px;
-  padding: 1px 2px;
-  background: #c015158a;
-}
-
-.submit {
-  width: 86px;
-  background: #c015158a;
-  padding: 1px 2px;
-}
-
-.test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.firebase table {
+  border: none;
+  outline: none;
   color: #fff;
-  border: 1px solid; 
-  text-align: center;
-  vertical-align: middle;
-  line-height: 5em;
-  position: relative;
-  width: 100%;
-  border-collapse: collapse;
-
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-.delete {
-  width: 115px;
-  padding: 8px 0;
-  background: #c015158a;
-  
+.hero .checkout {
+  position: relative;
+  left: 1650px;
+  bottom: 20px;
 }
 
 

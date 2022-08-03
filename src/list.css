@@ -1,0 +1,24 @@
+* {
+    color: white;
+}
+
+div .items {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    
+}
+
+button {
+    color:white;
+    background: #c015158a;
+}
+
+.product {
+    text-align: center;
+    width: 300px;
+    border: 15px solid white;
+    padding: 50px;
+    margin: 20px;
+}
