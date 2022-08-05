@@ -1,4 +1,4 @@
-import react from "react"
+import React from "react"
 import {useState, useEffect} from "react"
 import wheel from "./wheel.png"
 import engine from "./engine.png"
@@ -16,15 +16,13 @@ import "./list.css"
 import StripeCheckout from "react-stripe-checkout"
 import "react-toastify/dist/ReactToastify.css"
 import { toast, ToastContainer } from "react-toastify"
-import { clear } from "@testing-library/user-event/dist/clear"
-toast.configure()
 const ItemList = ({total, setTotal, numCart, setNumCart, user, logout}) => {
 
     const [cart, setCart] = useState([])
     const dataCollectionRef = collection(db,"cart")
 
-    const notify = () => {
-        toast.success("Purchase complete!", {position: toast.POSITION.TOP_CENTER})
+    const notify = () =>  {
+        window.alert("Purchase Succesful!")
     }
 
     function handleToken(token) {
@@ -212,7 +210,7 @@ const ItemList = ({total, setTotal, numCart, setNumCart, user, logout}) => {
                     <h1>Price: $14.99</h1> <button onClick = {() => addToCart("Air Filter")}>Add to Cart</button>
                 </div>
             </div>
-            <h1>Cart: ${Math.round(total * 100)/100}</h1> <button onClick = {() => clearCart()}>Clear Cart</button>
+            <h1>Cart: ${Math.round(total * 100)/100}</h1> <button onClick = {() => clearCart()}>Clear Cart</button> 
             {total !== 0 ? (
                     <>
                     <StripeCheckout
@@ -252,7 +250,7 @@ const ItemList = ({total, setTotal, numCart, setNumCart, user, logout}) => {
                                                 <tr>
                                                     <td>{val.amount}</td>
                                                     <td>{val.item}</td>
-                                                    <td>{val.total}</td>
+                                                    <td>${Math.round(val.total * 100)/100}</td>
                                                     <td><button onClick = {() => removeOneItem(val.item)}>Remove One Item</button></td>
                                                     <td><button onClick = {() => removeAllItems(val.item)}>Remove all Items</button></td>
                                                 </tr>
