@@ -18,6 +18,7 @@ export default function Hero ({user,logout}) {
                     <h2>AutoParts E-commerce</h2>
                 </div>
                 <div>
+                    <h2>Current User: {user.email}</h2>
                 </div>
             </nav>
             <ItemList
