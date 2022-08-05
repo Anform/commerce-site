@@ -123,6 +123,7 @@
 
 .hero nav h1 {
   color: #fff;
+  font-size: 20px;
 }
 
 .hero nav button {
@@ -135,6 +136,7 @@
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .hero .checkout {
